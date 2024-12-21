@@ -29,10 +29,7 @@ class Game {
         this.setupWall(size*8, height-size*3.25)
         this.setupWall(size*11, height-size*3.25)
 
-        this.gbar = []
-        for(let x=0; x<65; x++) {
-            this.gbar.push(new Wall(x*size/5, height-size*0.5, (x+1)*size/5, height-size*0.6))
-        }
+        this.setupBar()
     }
     draw() {
         background(0)
@@ -63,8 +60,6 @@ class Game {
             image(images[8], size*(i+1)*1.25, height-size/4, size, size/2)
         }
         pop()
-        fill('#04ff16')
-        this.gbar.forEach((b) => {if(b.alive) b.draw()})
 
         //use wasd or arrow keys and space
         push()
@@ -105,6 +100,10 @@ class Game {
 
         //bullets
         this.bullets.forEach((b) => {if(b.alive) b.draw()})
+
+            
+        fill('#04ff16')
+        this.gbar.forEach((b) => {if(b.alive) b.draw()})
     }
     setupEnemies() {
         this.enemies = []
@@ -140,6 +139,12 @@ class Game {
         this.walls.push(new Wall(size*0.6+x, -size*0.7+y, size*0.5+x, size/2+y))
         this.walls.push(new Wall(size*0.7+x, -size*0.6+y, size*0.6+x, size/2+y))
         this.walls.push(new Wall(size*0.8+x, -size*0.5+y, size*0.7+x, size/2+y))
+    }
+    setupBar() {
+        this.gbar = []
+        for(let x=0; x<65; x++) {
+            this.gbar.push(new Wall(x*size/5, height-size*0.5, (x+1)*size/5, height-size*0.6))
+        }
     }
     setTick() {
         clearInterval(this.tick)

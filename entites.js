@@ -25,6 +25,7 @@ class Enemy {
                 game.setupWall(size*5, height-size*3.25)
                 game.setupWall(size*8, height-size*3.25)
                 game.setupWall(size*11, height-size*3.25)
+                game.setupBar()
             }
         }
         if(this.dtime > 0) this.dtime--
