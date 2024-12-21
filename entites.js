@@ -29,7 +29,7 @@ class Enemy {
         }
         if(this.dtime > 0) this.dtime--
         this.hit()
-        if(!game.pause) if(Math.random() < 0.003 && this.canShoot()) game.bullets.push(new Bullet(this.x, this.y+size*0.45, game.speed/15, round(random(2, 3))))
+        if(!game.pause) if(Math.random() < 0.002 && this.canShoot()) game.bullets.push(new Bullet(this.x, this.y+size*0.45, game.speed/15, round(random(2, 3))))
     }
     move() {
         if(this.img < 2) {
@@ -59,7 +59,7 @@ class Enemy {
     canShoot() {
         let output = true
         game.enemies.forEach((e) => {
-            if(e.x-this.x < size/2 && e.y > this.y) output = false
+            if(e.alive && abs(e.x-this.x) < size*0.5 && e.y > this.y) output = false
         })
         return output
     }
