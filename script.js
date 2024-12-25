@@ -28,6 +28,7 @@ function setup() {
     textFont(font)
     noSmooth()
     noStroke()
+    frameRate(60)
 
     game = new Game()
     draw = () => {game.draw()}
