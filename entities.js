@@ -30,7 +30,7 @@ class Enemy {
         }
         if(this.dtime > 0) this.dtime--
         this.hit()
-        if(!game.pause) if(Math.random() < 0.002 && this.canShoot()) game.bullets.push(new Bullet(this.x, this.y+size*0.55, height/game.speed/5, round(random(2, 3))))
+        if(!game.pause) if(Math.random() < 0.002 && this.canShoot()) game.bullets.push(new Bullet(this.x, this.y+size*0.55, 2.5, round(random(2, 3))))
     }
     move() {
         if(this.img < 2) {
