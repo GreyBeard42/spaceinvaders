@@ -2,21 +2,21 @@ let size, font, game
 let images = []
 
 function preload() {
-    font = loadFont("space.ttf")
+    font = loadFont("https://cdn.jsdelivr.net/gh/GreyBeard42/spaceinvaders@main/space.ttf")
     //aliens
     for(i=0; i<6; i++) {
-        images.push(loadImage("images/alien_"+i+".png"))
+        images.push(loadImage("https://cdn.jsdelivr.net/gh/GreyBeard42/spaceinvaders@main/images/alien_"+i+".png"))
     }
     //sprites
     for(i=0; i<4; i++) {
-        images.push(loadImage("images/sprite_"+i+".png"))
+        images.push(loadImage("https://cdn.jsdelivr.net/gh/GreyBeard42/spaceinvaders@main/images/sprite_"+i+".png"))
     }
     //bullets
     for(i=0; i<8; i++) {
-        images.push(loadImage("images/pow_"+i+".png"))
+        images.push(loadImage("https://cdn.jsdelivr.net/gh/GreyBeard42/spaceinvaders@main/images/pow_"+i+".png"))
     }
 
-    images.push(loadImage("images/barrier.png"))
+    images.push(loadImage("https://cdn.jsdelivr.net/gh/GreyBeard42/spaceinvaders@main/images/barrier.png"))
 }
 
 function setup() {
