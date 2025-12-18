@@ -1,0 +1,16 @@
+{
+  "title": "Space Invaders",
+  "desc": "A p5.js recreation of Space Invaders",
+
+  "status": "archived",
+  "version": "v1.7",
+
+  "date": "12/20/2024",
+
+  "tags": [
+    "javascript",
+    "p5.js",
+    "game",
+    "retro"
+  ]
+}
